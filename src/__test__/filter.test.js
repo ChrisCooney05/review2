@@ -20,4 +20,8 @@ describe("filter", () => {
   test("Returns music if input falls between lower and upper boundary", () => {
     expect(filter([10, 75, 2000], 20, 1500)).toEqual([20, 75, 1500]);
   });
+
+  test("If anything but an integer is in the array we need an error returned", () => {
+    expect(filter([10, 20, "string", 20])).toEqual("Error file corrupted");
+  });
 });
