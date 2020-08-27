@@ -12,4 +12,8 @@ describe("filter", () => {
   test("function will return music and lower band, 2 arguments supplied", () => {
     expect(filter([10, 10])).toEqual([40, 40]);
   });
+
+  test("Returns music if input falls between lower and upper boundary", () => {
+    expect(filter([60, 75, 90])).toEqual([60, 75, 90]);
+  });
 });
