@@ -1,5 +1,6 @@
 function filter(music, lowerBand = 40, upperBand = 1000) {
   let result = [];
+
   for (let i = 0; i < music.length; i++) {
     if (typeof music[i] !== "number") {
       return "Error file corrupted";
