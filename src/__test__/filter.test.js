@@ -23,5 +23,6 @@ describe("filter", () => {
 
   test("If anything but an integer is in the array we need an error returned", () => {
     expect(filter([10, 20, "string", 20])).toEqual("Error file corrupted");
+    expect(filter([10, 20, null, 20])).toEqual("Error file corrupted");
   });
 });
