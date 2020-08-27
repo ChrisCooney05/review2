@@ -16,4 +16,8 @@ describe("filter", () => {
   test("Returns music if input falls between lower and upper boundary", () => {
     expect(filter([60, 75, 90])).toEqual([60, 75, 90]);
   });
+
+  test("Returns music if input falls between lower and upper boundary", () => {
+    expect(filter([10, 75, 2000], 20, 1500)).toEqual([20, 75, 1500]);
+  });
 });
